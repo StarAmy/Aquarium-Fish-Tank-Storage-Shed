@@ -1,0 +1,11 @@
+{
+    "Name": "[CP] Aquarium Fish Tank Storage Shed",
+    "Author": "StarAmy",
+    "Version": "1.0.0",
+    "Description": "An aquarium-themed shed interior for storing your fish tanks.",
+    "UniqueID": "StarAmy.Shed",
+    "MinimumApiVersion": "2.11.0",
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
+}

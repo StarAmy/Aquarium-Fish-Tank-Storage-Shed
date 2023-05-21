@@ -1,0 +1,218 @@
+{
+    "Format": "1.28",
+    "ConfigSchema":{
+       "Hallway Fillers":{
+         "AllowValues":"Posters, Skeletons, Arrows, Tanks, Banners",
+         "Default":"Tanks"
+      },
+      "Wall Height":{
+         "AllowValues":"Full, Low",
+         "Default":"Full"
+      },
+      "Shark Tunnel":{
+         "AllowValues":"True, False",
+         "Default":"True"
+      },
+      "Tropical Island":{
+         "AllowValues":"True, False",
+         "Default":"True"
+      },
+      "Fire Extinguishers":{
+         "AllowValues":"True, False",
+         "Default":"True"
+      },
+      "Whale Skeletons":{
+         "AllowValues":"Front, Rear, False",
+         "Default":"Rear"
+      },
+    },
+    "Changes": [
+         {
+            "Action": "Load",
+            "Target": "Maps/Shed",
+            "FromFile": "assets/Shed.tmx",
+            "When": {
+                "Wall Height": "Full",
+      },
+        },
+         {
+            "Action": "Load",
+            "Target": "Maps/Shed",
+            "FromFile": "assets/Shed_ForTanks.tmx",
+            "When": {
+                "Wall Height": "Low",
+      },
+        },
+        {
+            "Action": "Load",
+            "Target": "assets/z_amyshed",
+            "FromFile": "assets/z_amyshed.png",
+        },
+        {
+            "Action": "Load",
+            "Target": "assets/z_tunnel_top",
+            "FromFile": "assets/z_tunnel_top.png",
+        },
+        {
+            "Action": "Load",
+            "Target": "assets/z_tunnel_zbottom",
+            "FromFile": "assets/z_tunnel_zbottom.png",
+        },
+        {
+            "Action": "EditMap",
+            "Target": "Maps/Shed",
+            "Update": "OnLocationChange",
+            "AddWarps": [
+                "19 42 Farm 21 22"
+            ],
+            "MapProperties": 
+                {
+                        "AmbientLight" : "75 75 75",
+            },
+        },
+        {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/Poster_Fillers.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Hallway Fillers": "Posters",
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/Skeleton_Fillers.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Hallway Fillers": "Skeletons",
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/Tank_Fillers.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Hallway Fillers": "Tanks",
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/Arrow_Fillers.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Hallway Fillers": "Arrows",
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/Banner_Fillers.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Hallway Fillers": "Banners",
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/Shark_Tunnel.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Shark Tunnel": "True",
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/Tropical_Island.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Tropical Island": "True",
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/No_Tunnel.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Shark Tunnel": "False",
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/No_Island.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Tropical Island": "False",
+      },
+      "Update": "OnTimeChange"
+    },
+     {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/Whales_Rear.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Whale Skeletons": "Rear",
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/Whales_Front.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Whale Skeletons": "Front",
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/Extinguishers.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Fire Extinguishers": "True",
+      },
+      "Update": "OnTimeChange"
+    },
+    ]
+}
