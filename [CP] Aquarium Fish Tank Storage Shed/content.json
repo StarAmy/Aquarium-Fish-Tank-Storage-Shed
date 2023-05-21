@@ -50,8 +50,8 @@
         },
         {
             "Action": "Load",
-            "Target": "assets/z_tunnel_top",
-            "FromFile": "assets/z_tunnel_top.png",
+            "Target": "assets/z_tunnel_topnew",
+            "FromFile": "assets/z_tunnel_topnew.png",
         },
         {
             "Action": "Load",
@@ -211,6 +211,18 @@
       "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
       "When": {
       "Fire Extinguishers": "True",
+      },
+      "Update": "OnTimeChange"
+    },
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Shed",
+      "PatchMode": "Overlay",
+      "FromFile": "assets/Island_Wall_Patch.tmx",
+      "FromArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "ToArea": { "X": 0, "Y": 0, "Width": 39, "Height": 44 },
+      "When": {
+      "Wall Height": "Low",
       },
       "Update": "OnTimeChange"
     },
